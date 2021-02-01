@@ -4,29 +4,29 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      stat-view-servlet: #ÅäÖÃ¼à¿ØÌ¨
-        enabled: true #ÆôÓÃ
-        url-pattern: /druid/* #¸ù¾İÅäÖÃÖĞµÄurl-patternÀ´·ÃÎÊÄÚÖÃ¼à¿ØÒ³Ãæ£¬Èç¹ûÊÇÉÏÃæµÄÅäÖÃ£¬ÄÚÖÃ¼à¿ØÒ³ÃæµÄÊ×Ò³ÊÇ/druid/index.html
+      stat-view-servlet: #ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Ì¨
+        enabled: true #ï¿½ï¿½ï¿½ï¿½
+        url-pattern: /druid/* #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½url-patternï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Ò³ï¿½æ£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½/druid/index.html
         login-username: root
         login-password: root
       db1:
-        breakAfterAcquireFailure: true #ÇëÇó±¨´íºóÁ¢¼´Í£Ö¹
-        initial-size: 6 #³õÊ¼»¯Ê±½¨Á¢ÎïÀíÁ¬½ÓµÄ¸öÊı¡£³õÊ¼»¯·¢ÉúÔÚÏÔÊ¾µ÷ÓÃinit·½·¨£¬»òÕßµÚÒ»´ÎgetConnectionÊ±
-        max-active: 10 #×î´óÁ¬½Ó³ØÊıÁ¿
-        min-idle: 6 #×îĞ¡Á¬½Ó³ØÊıÁ¿
-        max-wait: 60000 #»ñÈ¡Á¬½ÓÊ±×î´óµÈ´ıÊ±¼ä£¬µ¥Î»ºÁÃë¡£ÅäÖÃÁËmaxWaitÖ®ºó£¬È±Ê¡ÆôÓÃ¹«Æ½Ëø£¬²¢·¢Ğ§ÂÊ»áÓĞËùÏÂ½µ£¬Èç¹ûĞèÒª¿ÉÒÔÍ¨¹ıÅäÖÃuseUnfairLockÊôĞÔÎªtrueÊ¹ÓÃ·Ç¹«Æ½Ëø¡£
-        pool-prepared-statements: true #	ÊÇ·ñ»º´æpreparedStatement£¬Ò²¾ÍÊÇPSCache¡£PSCache¶ÔÖ§³ÖÓÎ±êµÄÊı¾İ¿âĞÔÄÜÌáÉı¾Ş´ó£¬±ÈÈçËµoracle¡£ÔÚmysqlÏÂ½¨Òé¹Ø±Õ
-        max-pool-prepared-statement-per-connection-size: 20 #ÒªÆôÓÃPSCache£¬±ØĞëÅäÖÃ´óÓÚ0£¬µ±´óÓÚ0Ê±£¬poolPreparedStatements×Ô¶¯´¥·¢ĞŞ¸ÄÎªtrue¡£ÔÚDruidÖĞ£¬²»»á´æÔÚOracleÏÂPSCacheÕ¼ÓÃÄÚ´æ¹ı¶àµÄÎÊÌâ£¬¿ÉÒÔ°ÑÕâ¸öÊıÖµÅäÖÃ´óÒ»Ğ©£¬±ÈÈçËµ100
-        time-between-eviction-runs-millis: 60000 #ÓĞÁ½¸öº¬Òå£º1) DestroyÏß³Ì»á¼ì²âÁ¬½ÓµÄ¼ä¸ôÊ±¼ä£¬Èç¹ûÁ¬½Ó¿ÕÏĞÊ±¼ä´óÓÚµÈÓÚminEvictableIdleTimeMillisÔò¹Ø±ÕÎïÀíÁ¬½Ó 2) testWhileIdleµÄÅĞ¶ÏÒÀ¾İ£¬ÏêÏ¸¿´testWhileIdleÊôĞÔµÄËµÃ÷
-        min-evictable-idle-time-millis: 30000 #Á¬½Ó±£³Ö¿ÕÏĞ¶ø²»±»ÇıÖğµÄ×îĞ¡Ê±¼ä
+        breakAfterAcquireFailure: true #ï¿½ï¿½ï¿½ó±¨´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ö¹
+        initial-size: 6 #ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÓµÄ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½initï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ßµï¿½Ò»ï¿½ï¿½getConnectionÊ±
+        max-active: 10 #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½
+        min-idle: 6 #ï¿½ï¿½Ğ¡ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½ï¿½
+        max-wait: 60000 #ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½È´ï¿½Ê±ï¿½ä£¬ï¿½ï¿½Î»ï¿½ï¿½ï¿½ë¡£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½maxWaitÖ®ï¿½ï¿½È±Ê¡ï¿½ï¿½ï¿½Ã¹ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ§ï¿½Ê»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½useUnfairLockï¿½ï¿½ï¿½ï¿½ÎªtrueÊ¹ï¿½Ã·Ç¹ï¿½Æ½ï¿½ï¿½ï¿½ï¿½
+        pool-prepared-statements: true #	ï¿½Ç·ñ»º´ï¿½preparedStatementï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½PSCacheï¿½ï¿½PSCacheï¿½ï¿½Ö§ï¿½ï¿½ï¿½Î±ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş´ó£¬±ï¿½ï¿½ï¿½Ëµoracleï¿½ï¿½ï¿½ï¿½mysqlï¿½Â½ï¿½ï¿½ï¿½Ø±ï¿½
+        max-pool-prepared-statement-per-connection-size: 20 #Òªï¿½ï¿½ï¿½ï¿½PSCacheï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0Ê±ï¿½ï¿½poolPreparedStatementsï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ş¸ï¿½Îªtrueï¿½ï¿½ï¿½ï¿½Druidï¿½Ğ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oracleï¿½ï¿½PSCacheÕ¼ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½Ô°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ã´ï¿½Ò»Ğ©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ëµ100
+        time-between-eviction-runs-millis: 60000 #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£º1) Destroyï¿½ß³Ì»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÓµÄ¼ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½minEvictableIdleTimeMillisï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2) testWhileIdleï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½ï¿½Ï¸ï¿½ï¿½testWhileIdleï¿½ï¿½ï¿½Ôµï¿½Ëµï¿½ï¿½
+        min-evictable-idle-time-millis: 30000 #ï¿½ï¿½ï¿½Ó±ï¿½ï¿½Ö¿ï¿½ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡Ê±ï¿½ï¿½
         max-evictable-idle-time-millis: 600000
-        validation-query: SELECT 1 FROM DUAL #ÓÃÀ´¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§µÄsql£¬ÒªÇóÊÇÒ»¸ö²éÑ¯Óï¾ä£¬³£ÓÃselect 'x'¡£Èç¹ûvalidationQueryÎªnull£¬testOnBorrow¡¢testOnReturn¡¢testWhileIdle¶¼²»»áÆğ×÷ÓÃ¡£
-        test-on-borrow: false #ÉêÇëÁ¬½ÓÊ±Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§£¬×öÁËÕâ¸öÅäÖÃ»á½µµÍĞÔÄÜ¡£
-        test-on-return: false #¹é»¹Á¬½ÓÊ±Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§£¬×öÁËÕâ¸öÅäÖÃ»á½µµÍĞÔÄÜ¡£
-        test-while-idle: true #½¨ÒéÅäÖÃÎªtrue£¬²»Ó°ÏìĞÔÄÜ£¬²¢ÇÒ±£Ö¤°²È«ĞÔ¡£ÉêÇëÁ¬½ÓµÄÊ±ºò¼ì²â£¬Èç¹û¿ÕÏĞÊ±¼ä´óÓÚtimeBetweenEvictionRunsMillis£¬Ö´ĞĞvalidationQuery¼ì²âÁ¬½ÓÊÇ·ñÓĞĞ§¡£
-        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 #Í¨¹ıconnectPropertiesÊôĞÔÀ´´ò¿ªmergeSql¹¦ÄÜ£»ÂıSQL¼ÇÂ¼
+        validation-query: SELECT 1 FROM DUAL #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½sqlï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½ï¿½select 'x'ï¿½ï¿½ï¿½ï¿½ï¿½validationQueryÎªnullï¿½ï¿½testOnBorrowï¿½ï¿½testOnReturnï¿½ï¿½testWhileIdleï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½
+        test-on-borrow: false #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±Ö´ï¿½ï¿½validationQueryï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»á½µï¿½ï¿½ï¿½ï¿½ï¿½Ü¡ï¿½
+        test-on-return: false #ï¿½é»¹ï¿½ï¿½ï¿½ï¿½Ê±Ö´ï¿½ï¿½validationQueryï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»á½µï¿½ï¿½ï¿½ï¿½ï¿½Ü¡ï¿½
+        test-while-idle: true #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªtrueï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½Ò±ï¿½Ö¤ï¿½ï¿½È«ï¿½Ô¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½timeBetweenEvictionRunsMillisï¿½ï¿½Ö´ï¿½ï¿½validationQueryï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ğ§ï¿½ï¿½
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 #Í¨ï¿½ï¿½connectPropertiesï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½mergeSqlï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½SQLï¿½ï¿½Â¼
         filters: stat,wall
       driverClassName: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://192.168.79.130:3306/report?useTimezone=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://localhost:3306/report?useTimezone=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
       username: root
-      password: 123456
+      password: root
