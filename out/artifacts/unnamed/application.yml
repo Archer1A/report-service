@@ -1,0 +1,32 @@
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      stat-view-servlet: #���ü��̨
+        enabled: true #����
+        url-pattern: /druid/* #���������е�url-pattern���������ü��ҳ�棬�������������ã����ü��ҳ�����ҳ��/druid/index.html
+        login-username: root
+        login-password: root
+      db1:
+        breakAfterAcquireFailure: true #���󱨴������ֹͣ
+        initial-size: 6 #��ʼ��ʱ�����������ӵĸ�������ʼ����������ʾ����init���������ߵ�һ��getConnectionʱ
+        max-active: 10 #������ӳ�����
+        min-idle: 6 #��С���ӳ�����
+        max-wait: 60000 #��ȡ����ʱ���ȴ�ʱ�䣬��λ���롣������maxWait֮��ȱʡ���ù�ƽ��������Ч�ʻ������½��������Ҫ����ͨ������useUnfairLock����Ϊtrueʹ�÷ǹ�ƽ����
+        pool-prepared-statements: true #	�Ƿ񻺴�preparedStatement��Ҳ����PSCache��PSCache��֧���α�����ݿ����������޴󣬱���˵oracle����mysql�½���ر�
+        max-pool-prepared-statement-per-connection-size: 20 #Ҫ����PSCache���������ô���0��������0ʱ��poolPreparedStatements�Զ������޸�Ϊtrue����Druid�У��������Oracle��PSCacheռ���ڴ��������⣬���԰������ֵ���ô�һЩ������˵100
+        time-between-eviction-runs-millis: 60000 #���������壺1) Destroy�̻߳������ӵļ��ʱ�䣬������ӿ���ʱ����ڵ���minEvictableIdleTimeMillis��ر��������� 2) testWhileIdle���ж����ݣ���ϸ��testWhileIdle���Ե�˵��
+        min-evictable-idle-time-millis: 30000 #���ӱ��ֿ��ж������������Сʱ��
+        max-evictable-idle-time-millis: 600000
+        validation-query: SELECT 1 FROM DUAL #������������Ƿ���Ч��sql��Ҫ����һ����ѯ��䣬����select 'x'�����validationQueryΪnull��testOnBorrow��testOnReturn��testWhileIdle�����������á�
+        test-on-borrow: false #��������ʱִ��validationQuery��������Ƿ���Ч������������ûή�����ܡ�
+        test-on-return: false #�黹����ʱִ��validationQuery��������Ƿ���Ч������������ûή�����ܡ�
+        test-while-idle: true #��������Ϊtrue����Ӱ�����ܣ����ұ�֤��ȫ�ԡ��������ӵ�ʱ���⣬�������ʱ�����timeBetweenEvictionRunsMillis��ִ��validationQuery��������Ƿ���Ч��
+        connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000 #ͨ��connectProperties��������mergeSql���ܣ���SQL��¼
+        filters: stat,wall
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/report?useTimezone=true&serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: root
